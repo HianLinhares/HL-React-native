@@ -1,2 +1,5 @@
-declare module '*.png'
-declare module '*.bmp'
+declare module '*.png' {
+    const value: any;
+    export default value;
+  }
+  
