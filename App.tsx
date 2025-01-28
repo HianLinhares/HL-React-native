@@ -1,18 +1,27 @@
-import { StyleSheet, Text, View,Image} from 'react-native';
+import { StyleSheet, Text, View,Image, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react'
 import symbolon from './assets/pictures/symbol-on.png';
 import symboloff from './assets/pictures/symbol-off.png';
 
 
 export default function App() {
-  const isActive = false;
+  const [isActive, setIsActive] = useState(true)
+  function handleySymbol(){
+    setIsActive((oldValue:boolean)=>{
+      return !oldValue;
+    })
+
+  }
 
   return (
-    <View style={styles.container}>
-      <Text style = {{color: 'white', backgroundColor: 'black', fontSize: 20 }}>Hello Hian</Text>
-      <Text style = {{color: 'white', backgroundColor: 'black', fontSize: 20 }}>Dev mobile react native</Text>
-      <Text style = {styles2.titleStyle}>teste de folha de estilo</Text> 
-      <Text style = {styles2.teste}>teste de folha de estilo</Text>
+    <View style={isActive ? styles.containerOn : styles.containerOff}>
+      
+      <Text style = {{color: 'white', fontSize: 20,justifyContent: 'center', alignItems: 'center'}}>Hello Hian</Text>
+      <Text style = {{color: 'white', fontSize: 20 }}>Dev mobile react native</Text>
+      <Text style = {styles.testeDeFolhaDeEstilo}></Text>
+      <TouchableOpacity onPress={handleySymbol}>
       <Image source={isActive ? symbolon : symboloff}></Image>
+      </TouchableOpacity>
     </View>
         
   );
@@ -32,11 +41,22 @@ const styles2 = StyleSheet.create({
 
 
 const styles = StyleSheet.create({
-  container: {
+  containerOn: {
     flex: 1,
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
+    color: 'blue'
+  },
+  containerOff:{
+    flex:1,
+    backgroundColor: 'grey',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color:'black',
+  },
+  testeDeFolhaDeEstilo:{
+    color: 'white',
   }
 });
 
@@ -50,7 +70,7 @@ const styles2 = StyleSheet.create({
   }
 })
 
-LINHA DE ESTILO 
+LINHA DE ESTILO
   <Text style = {{color: 'white', backgroundColor: 'black', fontSize: 20 }}>Dev mobile react native</Text>
 
 */
