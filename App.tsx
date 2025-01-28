@@ -15,10 +15,9 @@ export default function App() {
 
   return (
     <View style={isActive ? styles.containerOn : styles.containerOff}>
-      
       <Text style = {{color: 'white', fontSize: 20,justifyContent: 'center', alignItems: 'center'}}>Hello Hian</Text>
       <Text style = {{color: 'white', fontSize: 20 }}>Dev mobile react native</Text>
-      <Text style = {styles.testeDeFolhaDeEstilo}></Text>
+      <Text style = {styles.folhaDeEstilo}></Text>
       <TouchableOpacity onPress={handleySymbol}>
       <Image source={isActive ? symbolon : symboloff}></Image>
       </TouchableOpacity>
@@ -55,7 +54,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     color:'black',
   },
-  testeDeFolhaDeEstilo:{
+  folhaDeEstilo:{
     color: 'white',
   }
 });
