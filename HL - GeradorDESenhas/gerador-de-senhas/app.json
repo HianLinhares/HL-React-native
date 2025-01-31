@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HL-APP",
-    "slug": "HL-APP",
+    "name": "gerador-de-senhas",
+    "slug": "gerador-de-senhas",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
