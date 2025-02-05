@@ -3,6 +3,7 @@ ESTUDOS DE REACT NATIVE - HIAN LINHARES
 
 RNBC -> ARQUIVO PADRÃO 
 RNSO -> ARQUIVO PARA FOLHA DE ESTILO 
+ ndwndiwidiwnidniwndw
 
 
 alalalallalalalalalalalal
