@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
    textAlign: 'center',
    fontWeight: 'condensedBold',
    fontSize: 25,
-   color: '#1b1f15'
+   color: 'green',
+   marginBottom: 15,
   },
   img:{
     resizeMode: 'contain',
