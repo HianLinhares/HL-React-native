@@ -14,7 +14,7 @@ export function App() {
       <Logo/>
 
       <View style ={styles.inputContainer}>
-        <CustomTextInput/>
+     
       </View>
       
       

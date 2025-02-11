@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
  styleTextInput:{
     marginTop: 50,
     backgroundColor: 'green',
-    color: 'black',
+    color: 'white',
     fontSize: 20,
     borderWidth: 1,
     borderRadius: 5,
