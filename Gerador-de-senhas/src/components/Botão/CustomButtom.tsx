@@ -3,6 +3,7 @@ import styles from './StyleButtom'
 import { CustomTextInput } from "../TextInput/TextInput";
 import { useState } from "react";
 import generatePass from "../../services/passwordService";
+import * as Clipboard from 'expo-clipboard';
 
 export function GeralButton(){
     const [pass, setPass] = useState('')
@@ -10,6 +11,10 @@ export function GeralButton(){
     function handleGenerateButtom(){
         let generateToken = generatePass()
         setPass(generatePass)
+    }
+
+    function handleCopyButtom(){
+        Clipboard.setStringAsync(pass)
     }
 
     return(
@@ -25,7 +30,7 @@ export function GeralButton(){
 
 
             <Pressable
-            onPress={()=>{console.log('foi pressionado')}}
+            onPress={handleCopyButtom}
             style={styles.styleButtom}
             >
             <Text style = {styles.styleText}> Copiar </Text>

@@ -20,6 +20,7 @@ export const styles = StyleSheet.create({
         color: 'white',
         textAlign: 'center',
         marginTop: 10,
+        padding: 5,
        
     }
 
