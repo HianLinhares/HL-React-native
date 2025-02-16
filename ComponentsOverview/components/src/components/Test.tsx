@@ -16,13 +16,13 @@ export function Home() {
   }
 
   return (
-    <View style={[styles.container, {backgroundColor: 'black'}]}>
+    <View style={[styles.container, {backgroundColor: 'white'}]}>
       <StatusBar style='light'/>
       <Text selectable={false}
        style={styles.container}
        onPress={()=>{console.log("pressionado")}}
        onLongPress={()=>{console.log("pressionamento longo")}}
-      >Hello World</Text>
+      >Hian Linhares</Text>
       <Image
       //Opção 1
       source={require('../../assets/download.png')}
@@ -35,7 +35,7 @@ export function Home() {
       onChange={(text)=>setUsuario(text.nativeEvent.text)}
       keyboardType= "email-address"
       placeholder='Escreva aqui...'
-      placeholderTextColor={'white'}
+      placeholderTextColor={'grey'}
       value= {usuario}
       />
       <Button
