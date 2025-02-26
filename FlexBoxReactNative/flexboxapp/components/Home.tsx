@@ -15,8 +15,7 @@ export function Home() {
       <StatusBar style="dark" /> */}
     <CaixaRed></CaixaRed>
     <CaixaBlue></CaixaBlue>
-    <CaixaRed></CaixaRed>
-    <CaixaBlue></CaixaBlue>
+    <CaixaGreen></CaixaGreen>
     </View>
   );
 }
@@ -24,7 +23,7 @@ export function Home() {
 
 export function CaixaRed(){
     return(
-    <View style={{height:100, width:200, backgroundColor: 'red', flex:1}}>
+    <View style={{height:100, width:100, backgroundColor: 'red'}}>
     </View>
     );
 }
@@ -32,7 +31,14 @@ export function CaixaRed(){
 
 export function CaixaBlue(){
     return(
-    <View style={{height:100, width:300, backgroundColor: 'blue', flex:1}}>
+    <View style={{height:100, width:100, backgroundColor: 'blue', alignSelf: 'flex-end'}}>
     </View>
     );
+}
+
+export function CaixaGreen(){
+  return(
+    <View style={{height:100, width:100, backgroundColor: 'green'}}>
+    </View>
+  );
 }
