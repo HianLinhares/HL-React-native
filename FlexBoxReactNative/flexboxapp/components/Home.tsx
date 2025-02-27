@@ -23,7 +23,7 @@ export function Home() {
 
 export function CaixaRed(){
     return(
-    <View style={{height:100, width:100, backgroundColor: 'red'}}>
+    <View style={{height:100, width:100, backgroundColor: 'red', alignSelf: 'flex-start'}}>
     </View>
     );
 }
@@ -31,14 +31,14 @@ export function CaixaRed(){
 
 export function CaixaBlue(){
     return(
-    <View style={{height:100, width:100, backgroundColor: 'blue', alignSelf: 'flex-end'}}>
+    <View style={{height:100, width:100, backgroundColor: 'blue', flexGrow:1}}>
     </View>
     );
 }
 
 export function CaixaGreen(){
   return(
-    <View style={{height:100, width:100, backgroundColor: 'green'}}>
+    <View style={{height:100, width:100, backgroundColor: 'green', alignSelf: 'flex-end'}}>
     </View>
   );
 }
