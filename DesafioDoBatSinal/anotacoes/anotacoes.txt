@@ -1,0 +1,4 @@
+NPX CREATE-EXPO-APP desafiodobatsinal -t 
+CD desafiodobatsinal
+LS 
+OK 
