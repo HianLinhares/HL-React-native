@@ -10,7 +10,7 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-    <TouchableOpacity onPress={()=> setnumber(number+1)}>
+    <TouchableOpacity onPress={()=> setnumber(number-1)}>
       <Text style = {styles.texto}>{number}</Text>
     </TouchableOpacity>
     </View>
@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   texto:{
-    fontSize:40
+    fontSize:40,
+    borderColor: 'black',
+    borderWidth: 10,
+    padding:40,
+    borderRadius:16,
   }
 });
