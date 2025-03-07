@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 export default function App() {
 
   const [number, setnumber] = useState(0);
-  const [numero, setnumero] = useState(0);
+  const [numero, setnumero] = useState(10);
 
   useEffect(()=>{
     if(numero===10)
