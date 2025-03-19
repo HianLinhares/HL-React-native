@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, Button, Alert } from 'react-native';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useReducer } from 'react';
 
 
 export default function App() {
@@ -7,11 +7,36 @@ export default function App() {
   const [number, setnumber] = useState(0);
   const [numero, setnumero] = useState(10);
 
-  useEffect(()=>{
-    if(numero===10)
+
+  // monitoramento de ações
+ useEffect (()=>{
+  if(numero===10 || numero===15){
     Alert.alert("Hian seu lindo")
-  },[numero])
+  }
+ },[numero])
   
+ //Use reducer, criação de eventos 
+const reducer = (state: {counter: number}, action: {type:string}) =>{
+  switch(action.type){
+    case 'somar':
+      return{
+        counter: state.counter + 1
+      }
+      default: 
+      return state
+  }
+}
+
+const [state, dispatch] = useReducer(reducer, {counter: 0})
+
+const somar = ()=>{
+  dispatch({type: 'somar'})
+}
+
+const subtrair = ()=>{
+  dispatch({type: 'subtrair'})
+}
+
 
   const incremento = ()=> {
     if(numero>-1){
