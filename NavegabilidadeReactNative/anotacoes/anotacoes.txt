@@ -1,0 +1,4 @@
+LINK DAS BIBLIOTECAS DO REACT NAVIGATION: https://reactnavigation.org/docs/getting-started
+
+PRIMEIRO A SER INSTALADO: npm install @react-navigation/native
+SEGUNDO A SER INSTALADO: npx expo install react-native-screens react-native-safe-area-context

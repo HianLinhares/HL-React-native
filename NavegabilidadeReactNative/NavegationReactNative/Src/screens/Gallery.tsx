@@ -1,12 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
-
+import { View, Text } from 'react-native';
 import { styles } from './StyleGalery';
 
-export function screens() {
+export function Gallery() {
   return (
     <View style={styles.container}>
-
+      <Text>Surprise mother fucker</Text>
     </View>
   );
 }
