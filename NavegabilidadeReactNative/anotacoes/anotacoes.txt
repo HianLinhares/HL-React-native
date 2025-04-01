@@ -2,3 +2,76 @@ LINK DAS BIBLIOTECAS DO REACT NAVIGATION: https://reactnavigation.org/docs/getti
 
 PRIMEIRO A SER INSTALADO: npm install @react-navigation/native
 SEGUNDO A SER INSTALADO: npx expo install react-native-screens react-native-safe-area-context
+
+
+DOCUMENTAÇÃO:
+
+Agora, você precisa envolver o aplicativo inteiro em NavigationContainer. Normalmente você faria isso no seu arquivo de entrada, como index.jsou App.js:
+
+tsx
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      {/* Rest of your app code */}
+    </NavigationContainer>
+  );
+};
+
+export default App;
+
+Agora você está pronto para criar e executar seu aplicativo no dispositivo/simulador.
+
+Agora você pode criar um aplicativo com uma tela inicial e uma tela de perfil:
+
+tsx
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
+const MyStack = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{title: 'Welcome'}}
+        />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+
+Neste exemplo, há 2 telas ( Homee Profile) definidas usando o Stack.Screencomponente. Da mesma forma, você pode definir quantas telas quiser.
+
+Você pode definir opções como o título de cada tela na optionspropriedade Stack.Screen.
+
+Cada tela recebe um componentprop que é um componente React. Esses componentes recebem um prop chamado navigationque tem vários métodos para vincular a outras telas. Por exemplo, você pode usar navigation.navigatepara ir para a Profiletela:
+
+tsx
+const HomeScreen = ({navigation}) => {
+  return (
+    <Button
+      title="Go to Jane's profile"
+      onPress={() =>
+        navigation.navigate('Profile', {name: 'Jane'})
+      }
+    />
+  );
+};
+const ProfileScreen = ({navigation, route}) => {
+  return <Text>This is {route.params.name}'s profile</Text>;
+};
+
+Este native-stacknavegador usa APIs nativas: UINavigationControllerno iOS e Fragmentno Android, para que a navegação criada com ele createNativeStackNavigatorse comporte da mesma forma e tenha as mesmas características de desempenho dos aplicativos criados nativamente sobre essas APIs.
+
+O React Navigation também tem pacotes para diferentes tipos de navegadores, como abas e gavetas. Você pode usá-los para implementar vários padrões no seu aplicativo.
+
+Para uma introdução completa ao React Navigation, siga o Guia de Introdução ao React Navigation .
